@@ -41,29 +41,43 @@ console.log('Multiplying 5, 3, and 8:', multiplyThree(5, 3, 8));
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
+  } else {
+  return false;
   }
-  return;
 }
+// end isPositive
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log('isPositive - should say true', isPositive(3));
 console.log('isPositive - should say false', isPositive(0));
 console.log('isPositive - should say false', isPositive(-3));
 
-
+const fruitArray = ['apple', 'orange', 'banana'];
+const emptyArray = [];
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
+  return array[array.length -1];
 }
+// end getLast
+console.log(getLast(fruitArray));
+console.log(getLast(emptyArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  for (one of array) {
+    if (one === value) {
+      return true;
+    } 
+  } 
+  return false;
 }
+// end find
+console.log('is cantaloupe in fruitArray?', find('cantaloupe', fruitArray));
+console.log('is orange in fruitArray?', find('orange', fruitArray));
 
 // ----------------------
 // Stretch Goals
