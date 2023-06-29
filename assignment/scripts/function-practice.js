@@ -43,7 +43,7 @@ function isPositive(number) {
   if (number > 0) {
     return true;
   } else {
-  return false;
+    return false;
   }
 }
 // end isPositive
@@ -58,7 +58,7 @@ const emptyArray = [];
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-  return array[array.length -1];
+  return array[array.length - 1];
 }
 // end getLast
 console.log(getLast(fruitArray));
@@ -71,8 +71,8 @@ function find(value, array) {
   for (one of array) {
     if (one === value) {
       return true;
-    } 
-  } 
+    }
+  }
   return false;
 }
 // end find
@@ -85,31 +85,59 @@ console.log('is orange in fruitArray?', find('orange', fruitArray));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
+  for (each of string) {
+    if (each === letter) {
+      return true;
+    }
+  }
+  return false;
 
 }
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
+let numberArray = [-1, 1, 2, 3, -32, 4, 5, 19]
+function sumAll(numbers) {
   let sum = 0;
+  for (each of numbers) {
+    sum = sum + each;
+  } return sum
   // TODO: loop to add items
 
   // TODO: return the sum
 }
+// end sumAll
+
+console.log(`This is the sum: ${sumAll(numberArray)}`)
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
-
+function allPositive(numbers) {
+  return positiveNumbers = numbers.filter(checkPositive)
+  function checkPositive(number) {
+    return number > 0;
+  }
 }
+// end allPositive
+
+console.log(allPositive(numberArray));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
+// Create a function that will take a positive number and add up all the integers from 1 to that number, resulting in one number.
+
+function addUp(num) {
+  let result = 0;
+  for (i = 1; i <= num; i++) {
+    result = result + i;
+  }
+  return result
+}
 
 // DO NOT MODIFY
 // Used for automated testing
