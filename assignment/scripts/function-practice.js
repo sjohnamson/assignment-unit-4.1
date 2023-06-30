@@ -42,25 +42,29 @@ console.log('Multiplying 5, 3, and 8:', multiplyThree(5, 3, 8));
 function isPositive(number) {
   if (number > 0) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 // end isPositive
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log('isPositive - should say true', isPositive(3));
 console.log('isPositive - should say false', isPositive(0));
 console.log('isPositive - should say false', isPositive(-3));
 
-const fruitArray = ['apple', 'orange', 'banana'];
-const emptyArray = [];
+
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+
+const fruitArray = ['apple', 'orange', 'banana'];
+const emptyArray = [];
+
 function getLast(array) {
   return array[array.length - 1];
 }
 // end getLast
+
 console.log(getLast(fruitArray));
 console.log(getLast(emptyArray));
 
@@ -68,7 +72,7 @@ console.log(getLast(emptyArray));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-  for (one of array) {
+  for (let one of array) {
     if (one === value) {
       return true;
     }
@@ -76,6 +80,7 @@ function find(value, array) {
   return false;
 }
 // end find
+
 console.log('is cantaloupe in fruitArray?', find('cantaloupe', fruitArray));
 console.log('is orange in fruitArray?', find('orange', fruitArray));
 
@@ -85,14 +90,13 @@ console.log('is orange in fruitArray?', find('orange', fruitArray));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  for (each of string) {
-    if (each === letter) {
-      return true;
-    }
+  if (letter === string[0]) {
+    return true;
   }
   return false;
-
 }
+// end isFirstLetter
+
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
@@ -100,11 +104,10 @@ console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 let numberArray = [-1, 1, 2, 3, -32, 4, 5, 19]
 function sumAll(numbers) {
   let sum = 0;
-  for (each of numbers) {
+  for (let each of numbers) {
     sum = sum + each;
   } return sum
   // TODO: loop to add items
-
   // TODO: return the sum
 }
 // end sumAll
@@ -114,8 +117,8 @@ console.log(`This is the sum: ${sumAll(numberArray)}`)
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive(numbers) {
-  return positiveNumbers = numbers.filter(checkPositive)
+const allPositive = numbers => {
+  return positiveNumbers = numbers.filter(checkPositive);
   function checkPositive(number) {
     return number > 0;
   }
@@ -138,6 +141,9 @@ function addUp(num) {
   }
   return result
 }
+// end addUp
+
+console.log('Testing addUp with 21:', addUp(21));
 
 // DO NOT MODIFY
 // Used for automated testing
